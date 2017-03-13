@@ -14,7 +14,11 @@ int main (int argc, char *argv[]) {
 		return 1;
 	} 
 	node* list = read_f(f);
+	if(list == NULL)
+        return -1; 
 	node* sort_list = sort(list);
+	if(sort_list == NULL)
+        return -1; 
 	show_list(sort_list);
 	return 0;
 		
